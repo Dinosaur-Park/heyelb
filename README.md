@@ -26,6 +26,9 @@ Get Started
 ----------------------------
 Prepare
 
+3 servers， minimal configuration，8c 32G 100 disk
+turnoff swap， 
+
 Installation
 
 ?
