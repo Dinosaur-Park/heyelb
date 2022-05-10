@@ -8,9 +8,9 @@ Features
 ------------------------
 1.The maximum number of forward traffic nodes is 254, and the computing power and bandwidth are close to infinity.
 
-2.The architecture borrows kubernetes and refers to the principle of SVC and endpoint forwarding in kubernetes.It can be managed(CRUD) based on yaml file or interface, which is simple and easy to operate.
+2.The architecture borrows kubernetes and refers to the principle of SVC and endpoint forwarding in kubernetes.CRUD management based on yaml file or interface, which is simple and easy to operate.
 
-3.Support traffic forwarding on layer 7 HTTP headers and layer 4 ports.
+3.Support health check on layer 7 HTTP headers, layer 4 ports and mysql service.
 
 4.General x86 server was liked without any special configuration or hardware.
 
