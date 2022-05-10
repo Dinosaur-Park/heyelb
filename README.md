@@ -24,6 +24,8 @@ Features
 
 Get Started
 ----------------------------
+Prepare
+
 Installation
 
 ?
