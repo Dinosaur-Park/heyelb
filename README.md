@@ -26,10 +26,8 @@ Get Started
 ----------------------------
 Installation
 
-Please refer to install documentation.
+?
 
 Getting started
 
-The getting started guide is a great way to learn the basics of APISIX. Just follow the steps in Getting Started.
-
-Further, you can follow the documentation to try more plugins.
+?
