@@ -79,4 +79,4 @@ def ops_eps(*args):
             logger.info('this ep has been deleted on the front side')
             return 200
         except Exception as e:
-            logger.info(e)
+            logger.error(e)
