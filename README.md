@@ -10,15 +10,15 @@ The technical architecture of HeYe LB:
 
 Features
 ------------------------
-1.The maximum number of forward traffic nodes is 254, and the computing power and bandwidth are close to infinity.
+1. The maximum number of forward traffic nodes is 254, and the computing power and bandwidth are close to infinity.
 
-2.The architecture borrows kubernetes and refers to the principle of SVC and endpoint forwarding in kubernetes. modify/add/delete/query management based on yaml file or interface, which is simple and friendly to operate.
+2. The architecture borrows kubernetes and refers to the principle of SVC and endpoint forwarding in kubernetes. modify/add/delete/query management based on yaml file or interface, which is simple and friendly to operate.
 
-3.Support 3 types of healthcheck on layer 7 HTTP headers, layer 4 ports and mysql service.
+3. Support 3 types of healthcheck on layer 7 HTTP headers, layer 4 ports and mysql service.
 
-4.General x86 server was liked without any special configuration or hardware.
+4. General x86 server was liked without any special configuration or hardware.
 
-5.The configuration of addition, deletion, modification and query supports hot update, which has no impact on the business.
+5. The configuration of addition, deletion, modification and query supports hot update, which has no impact on the business.
 
 
 Get Started
