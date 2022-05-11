@@ -25,7 +25,7 @@ Get Started
 ----------------------------
 Prepare
 
-3 servers， minimal configuration: 
+3 servers， minimal configuration(Strongly recommended): 
 
 1. 8c 32G 100 disk
 
