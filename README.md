@@ -2,7 +2,7 @@
 
 HeYe is a kubernetes-native, high-performance loadbalancer.
 
-HeYe provides traffic forward features, which handle traditional north-south traffic, as well as east-west traffic in datacenter and supports three health check type.
+HeYe provides traffic forward features, which handle traditional north-south traffic, as well as east-west traffic in datacenter and supports three health check types.
 
 The technical architecture of HeYe LB:
 
