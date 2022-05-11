@@ -6,7 +6,7 @@ HeYe provides traffic forward features, which handle traditional north-south tra
 
 The technical architecture of HeYe LB:
 
-<img width="1091" alt="image" src="https://user-images.githubusercontent.com/104561610/167608059-4a7b7e48-3287-4fcd-a6bc-a4df259d4b20.png">
+![image](https://user-images.githubusercontent.com/104561610/167752606-32b1ebf0-d9d2-4435-aaa7-420d37f5f889.png)
 
 
 Features
