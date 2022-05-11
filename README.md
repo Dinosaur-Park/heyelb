@@ -25,9 +25,11 @@ Get Started
 ----------------------------
 Prepare
 
-3 servers， minimal configuration，8c 32G 100 disk
+3 servers， minimal configuration: 
 
-turnoff swap，supports passwordless login
+1. 8c 32G 100 disk
+
+2. turnoff swap，supports passwordless login
 
 Installation
 
