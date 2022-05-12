@@ -59,4 +59,42 @@ Installation
 
 Getting started
 
-?
+edit a yaml file, Service.spec.ports.name and Endpoints.subnets.addresses.ports.name must be the sanme, Endpoints.metadata.annotations.calledSource and Endpoints.metadata.annotations.calledSource.healthCheckType are required. for examle: 
+ 
+kind: Service
+apiVersion: v1
+metadata:
+  name: snake-demo-svc2
+  namespace: lwl-test
+spec:
+  ports:
+  - nodePort: 47917
+    port: 47917
+    protocol: TCP
+    name: ss-tcp                                *have to*
+  type: NodePort 
+---
+kind: Endpoints
+apiVersion: v1
+metadata: 
+  name: snake-demo-svc2
+  namespace: lwl-test
+  annotations:
+    calledSource: "kubectl-client-side-apply"    *have to*
+    healthCheckType: "http"                      *have to*
+subsets:
+- addresses:
+  - ip: 10.1.31.158
+  ports:
+   - port: 9090
+     name: ss-tcp                                *have to*
+- addresses:
+  - ip: 10.1.31.160
+  ports:
+   - port: 80
+     name: ss-tcp                                *have to*
+- addresses:
+  - ip: 10.1.31.154
+  ports:
+   - port: 9091
+     name: ss-tcp                                *have to*
