@@ -1,8 +1,8 @@
 # HeYeLB(Distributed Loadbalancer)
 
-HeYe is a high-performance, high scalable, ops-friendly, kubernetes-native loadbalancer.
+HeYe is a high-performance, high-scalability, ops-friendly, kubernetes-native loadbalancer.
 
-HeYe provides traffic forward features, which handle traditional north-south traffic, as well as east-west traffic in datacenter and supports three health check types.
+HeYe provides traffic forward features, which handle traditional north-south traffic, as well as east-west traffic in datacenter and supports three types of health check.
 
 The technical architecture of HeYe LB:
 
