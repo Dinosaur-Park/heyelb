@@ -43,7 +43,7 @@ Installation
 
   3. sh master_node.sh <node2_ip> <node3_ip> <node2_hostname> <node3_hostname> <vip> <svc_ip_cidr> <pod_ip_cidr> <etcd_endpoints>
   
-     for example: sh master_node.sh 10.1.1.2 10.1.1.3 k8s02 k8s03 10.1.1.4 10.11.0.0 10.12.0.0   "https://10.151.31.92:2379,https://10.151.31.93:2379,https://10.151.31.150:2379"
+     for example: sh master_node.sh 10.1.1.2 10.1.1.3 k8s02 k8s03 10.1.1.4 10.11.0.0 10.12.0.0   "https://10.1.1.92:2379,https://10.1.1.93:2379,https://10.1.1.150:2379"
   
   4. sh worker_node.sh <vip> <etcd_endpoints> <svc_ip_DNS>  "cluster.local." "/kube-centos/network"
   
