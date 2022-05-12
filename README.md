@@ -25,11 +25,13 @@ Get Started
 ----------------------------
 Prepare
 
-3 servers， minimal configuration(Strongly recommended): 
+1. core switch supports network quality management, such as cisco sla, h3c nqa
 
-1. 8c 32G 100 disk
+2. 3 servers， minimal configuration(Strongly recommended): 
 
-2. turnoff swap，supports passwordless login
+* 8c 32G 100 disk
+
+* turnoff swap，supports passwordless login
 
 Installation
 
