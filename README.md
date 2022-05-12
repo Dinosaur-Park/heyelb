@@ -37,7 +37,7 @@ Installation
 
 1. login node1
  
-2. cd your_path/heyelb/install_cli
+2. cd *your_path*/heyelb/install_cli
 
 3. sh master_node.sh <node2_ip> <node3_ip> <node2_hostname> <node3_hostname> <vip> <svc_ip_cidr> <pod_ip_cidr> <etcd_endpoints>
   
@@ -53,7 +53,7 @@ Installation
   
   cd /workdir/servers/ && touch upstream.conf 
   
-  cp your_path/admin.kubeconfig /workdir/kubeconfig && cd /workdir/kubeconfig/ && mv admin.kubeconfig kubeconfig.yaml
+  cp *your_path*/admin.kubeconfig /workdir/kubeconfig/ && cd /workdir/kubeconfig/ && mv admin.kubeconfig kubeconfig.yaml
   
   docker run -v /workdir/servers/:/export/home/yeepine-1.0/conf/servers/ -v /workdir/etcd:/default.etcd -v /workdir/kubeconfig:/workdir/kubeconfig -d heyelb:v6 /bin/bash
 
