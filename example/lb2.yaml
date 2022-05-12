@@ -1,0 +1,37 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: snake-demo-svc2
+  namespace: lwl-test
+spec:
+  ports:
+  - nodePort: 47917
+    port: 47917
+    protocol: TCP
+    name: ss-tcp
+  type: NodePort 
+---
+kind: Endpoints
+apiVersion: v1
+metadata: 
+  name: snake-demo-svc2
+  namespace: lwl-test
+  annotations:
+    calledSource: "kubectl-client-side-apply"
+    healthCheckType: "http"
+subsets:
+- addresses:
+  - ip: 10.1.31.158
+  ports:
+   - port: 9090
+     name: ss-tcp
+- addresses:
+  - ip: 10.1.31.160
+  ports:
+   - port: 80
+     name: ss-tcp
+- addresses:
+  - ip: 10.1.31.154
+  ports:
+   - port: 9091
+     name: ss-tcp
