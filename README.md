@@ -67,4 +67,4 @@ Getting started
 
 ok, let us have a nice journey!
   
-if you have any ideas or questions, please tell me or raise 
+if you have any ideas or questions, please tell me(422287032@qq.com) or take a new issue. thanks
