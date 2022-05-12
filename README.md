@@ -25,13 +25,13 @@ Get Started
 ----------------------------
 Prepare
 
-1. core switch supports network quality management, such as cisco sla, h3c nqa
+  1. core switch supports network quality management, such as cisco sla, h3c nqa
 
-2. 3 servers， minimal configuration(Strongly recommended): 
+  2. 3 servers， minimal configuration(Strongly recommended): 
 
-* 8c 32G 100 disk
+     * 8c 32G 100 disk
 
-* turnoff swap on all nodes，supports passwordless login beetween nodes
+     * turnoff swap on all nodes，supports passwordless login beetween nodes
 
 Installation
 
@@ -60,4 +60,5 @@ Installation
 Getting started
 
 1. edit a yaml file, Service.spec.ports.name and Endpoints.subnets.addresses.ports.name must be the sanme, Endpoints.metadata.annotations.calledSource and Endpoints.metadata.annotations.calledSource.healthCheckType are required. 
+ 2.
 
