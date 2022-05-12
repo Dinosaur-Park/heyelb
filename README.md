@@ -35,7 +35,7 @@ Prepare
 
 Installation
 
-?
+1. cd your_path/heyelb/ && wget 
 
 Getting started
 
