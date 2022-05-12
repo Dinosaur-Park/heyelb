@@ -25,7 +25,7 @@ Get Started
 ----------------------------
 Prepare
 
-  1. core switch supports network quality management, such as cisco sla, h3c nqa
+  1. core switch supports network quality feature, such as cisco sla, h3c nqa
 
   2. 3 servers， minimal configuration(Strongly recommended): 
 
@@ -61,5 +61,5 @@ Getting started
 
   1. edit a yaml file, Service.spec.ports.name and Endpoints.subnets.addresses.ports.name must be the sanme, Endpoints.metadata.annotations.calledSource and Endpoints.metadata.annotations.calledSource.healthCheckType are required. 
   
-  2. Endpoints.metadata.annotations.calledSource.healthCheckType heve 3 types, which supports http, tcp and mysql.
+  2. Endpoints.metadata.annotations.calledSource.healthCheckType have 3 types, which only supports http, tcp and mysql.
 
