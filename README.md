@@ -59,5 +59,5 @@ Installation
 
 Getting started
 
-edit a yaml file, Service.spec.ports.name and Endpoints.subnets.addresses.ports.name must be the sanme, Endpoints.metadata.annotations.calledSource and Endpoints.metadata.annotations.calledSource.healthCheckType are required. 
+1. edit a yaml file, Service.spec.ports.name and Endpoints.subnets.addresses.ports.name must be the sanme, Endpoints.metadata.annotations.calledSource and Endpoints.metadata.annotations.calledSource.healthCheckType are required. 
 
