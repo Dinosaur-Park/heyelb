@@ -35,30 +35,30 @@ Prepare
 
 Installation
 
-1. login node1
+  1. login node1
  
-2. cd *your_path*/heyelb/install_cli
+  2. cd *your_path*/heyelb/install_cli
 
-3. sh master_node.sh <node2_ip> <node3_ip> <node2_hostname> <node3_hostname> <vip> <svc_ip_cidr> <pod_ip_cidr> <etcd_endpoints>
+  3. sh master_node.sh <node2_ip> <node3_ip> <node2_hostname> <node3_hostname> <vip> <svc_ip_cidr> <pod_ip_cidr> <etcd_endpoints>
   
-   for example: sh master_node.sh 10.1.1.2 10.1.1.3 k8s02 k8s03 10.1.1.4 10.11.0.0 10.12.0.0 "https://10.151.31.92:2379,https://10.151.31.93:2379,https://10.151.31.150:2379"
+     for example: sh master_node.sh 10.1.1.2 10.1.1.3 k8s02 k8s03 10.1.1.4 10.11.0.0 10.12.0.0   "https://10.151.31.92:2379,https://10.151.31.93:2379,https://10.151.31.150:2379"
   
-4. sh worker_node.sh <vip> <etcd_endpoints> <svc_ip_DNS>  "cluster.local." "/kube-centos/network"
+  4. sh worker_node.sh <vip> <etcd_endpoints> <svc_ip_DNS>  "cluster.local." "/kube-centos/network"
   
-5. docker pull heyelb:v6
+  5. docker pull heyelb:v6
   
-6. choose anyone node and run heyelb:
+  6. choose anyone node and run heyelb:
   
-   mkdir -p /workdir/servers/ && mkdir -p /workdir/etcd/ && mkdir -p /workdir/kubeconfig/ 
+     * mkdir -p /workdir/servers/ && mkdir -p /workdir/etcd/ && mkdir -p /workdir/kubeconfig/ 
   
-   cd /workdir/servers/ && touch upstream.conf 
+     * cd /workdir/servers/ && touch upstream.conf 
   
-   cp *your_path*/admin.kubeconfig /workdir/kubeconfig/ && cd /workdir/kubeconfig/ && mv admin.kubeconfig kubeconfig.yaml
+     * cp *your_path*/admin.kubeconfig /workdir/kubeconfig/ && cd /workdir/kubeconfig/ && mv admin.kubeconfig kubeconfig.yaml
   
-   docker run -v /workdir/servers/:/export/home/yeepine-1.0/conf/servers/ -v /workdir/etcd:/default.etcd -v /workdir/kubeconfig:/workdir/kubeconfig -d heyelb:v6 /bin/bash
+     * docker run -v /workdir/servers/:/export/home/yeepine-1.0/conf/servers/ -v /workdir/etcd:/default.etcd -v /workdir/kubeconfig:/workdir/kubeconfig -d heyelb:v6 /bin/bash
 
 Getting started
 
-1. edit a yaml file, Service.spec.ports.name and Endpoints.subnets.addresses.ports.name must be the sanme, Endpoints.metadata.annotations.calledSource and Endpoints.metadata.annotations.calledSource.healthCheckType are required. 
- 2.
+  1. edit a yaml file, Service.spec.ports.name and Endpoints.subnets.addresses.ports.name must be the sanme, Endpoints.metadata.annotations.calledSource and Endpoints.metadata.annotations.calledSource.healthCheckType are required. 
+  2.
 
