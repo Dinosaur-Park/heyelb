@@ -35,6 +35,8 @@ Prepare
 
 Installation
 
+  0. equivalent routing is configured on the switch and all traffic which forwards svc_cidr goes through three nodes
+
   1. login node1
  
   2. cd *your_path*/heyelb/install_cli
