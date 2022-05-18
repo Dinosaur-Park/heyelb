@@ -29,7 +29,7 @@ Prepare
 
   2. 3 servers， minimal configuration(Strongly recommended): 
 
-     * 8c 32G 100 disk
+     * 8c, 32G mem, 100G disk
 
      * turnoff swap on all nodes，supports passwordless login beetween nodes
 
@@ -61,7 +61,7 @@ Installation
 
 Getting started
 
-  1. edit a yaml file, Service.spec.ports.name and Endpoints.subnets.addresses.ports.name must be the sanme, Endpoints.metadata.annotations.calledSource and Endpoints.metadata.annotations.calledSource.healthCheckType are required. 
+  1. edit a yaml file, Service.spec.ports.name and Endpoints.subnets.addresses.ports.name must be the same, Endpoints.metadata.annotations.calledSource and Endpoints.metadata.annotations.calledSource.healthCheckType are required. 
   
   2. Endpoints.metadata.annotations.calledSource.healthCheckType have 3 types, which supports only http, tcp and mysql.
 
