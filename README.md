@@ -10,11 +10,11 @@ The technical architecture of HeYe LB:
 
 Features
 ------------------------
-1. Traffic forwarding is implemented through LVS. As we all know, LVS is an implementation of Layer 4 load balancing inside the Linux kernel. Layer 4 load balancing works on OSI Layer 4 (Transport Layer) and distributes requests to the servers at the transport layer without looking at the content of the packets, so it has the best performance.
+1. The data plane and the control plane are separated in the architecture, a clean architecture is realized. The data plane is borrowed from kubernetes, and the control plane is implemented by ourselves, which is very lightweight.
 
 2. The forward traffic nodes are stateless and support horizontal scaling. The maximum number of nodes is 254, and the computing power and bandwidth are close to infinity.
 
-3. The data plane and the control plane are separated in the architecture, a clean architecture is realized. The data plane is borrowed from kubernetes, and the control plane is implemented by ourselves, which is very lightweight
+3. Traffic forwarding is implemented through LVS. As we all know, LVS is an implementation of Layer 4 load balancing inside the Linux kernel. Layer 4 load balancing works on OSI Layer 4 (Transport Layer) and distributes requests to the servers at the transport layer without looking at the content of the packets, so it has the best performance.
 
 4. General x86 server was liked without any special configuration or hardware.
 
