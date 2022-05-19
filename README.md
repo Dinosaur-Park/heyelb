@@ -20,7 +20,7 @@ Features
 
 5. The configuration of addition, deletion, modification and query supports hot update, which has no impact on the business. These can be done through yam and API, which is very simple and friendly
 
-6. Support 3 modes of health check on layer 7 HTTP headers, layer 4 tcp ports and mysql service.
+6. Support 3 modes of health check on layer 7 HTTP headers, layer 4 tcp port and mysql service.
 
 7. Supports multiple load balancing modes, such as RR, LC, WLC, WRR, source hash, etc.
 
