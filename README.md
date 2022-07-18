@@ -1,4 +1,4 @@
-# HeYeLB(Distributed Loadbalancer)
+# HeYeLB(Parasaus)
 
 HeYe is a high-performance, high-scalability, ops-friendly, kubernetes-native loadbalancer.
 
