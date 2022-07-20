@@ -1,10 +1,10 @@
-# HeYeLB(Parasaus)
+# HeYe(Parasaus)
 
-HeYe is a high-performance, high-scalability, ops-friendly, kubernetes-native loadbalancer.
+HeYe(Parasaus) is a high-performance, high-scalability, ops-friendly, kubernetes-native loadbalancer.
 
-HeYe provides traffic forward features, which handle traditional north-south traffic, as well as east-west traffic in datacenter efficiently.
+HeYe(Parasaus) provides traffic forward features, which handle traditional north-south traffic, as well as east-west traffic in datacenter efficiently.
 
-The technical architecture of HeYe LB:
+The technical architecture of HeYe(Parasaus):
 
 ![image](https://user-images.githubusercontent.com/104561610/167753755-4b40ea7d-1c8f-4d2d-b2ec-bb1436025e93.png)
 
