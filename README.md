@@ -32,7 +32,17 @@ Prepare
 
   1. you have to a k8s cluster
 
-  2. kubectl create -f heyelb/conf/yaml/create_lb.yaml 
+  2. configure a volume to store data. for example: nfs, pv&pvc, hostpath
+     
+     as following about "hostpath":
+     
+     mkdir -p /workdir/servers/ && mkdir -p /workdir/etcd/ && mkdir -p /workdir/kubeconfig/
+
+     cd /workdir/servers/ && touch upstream.conf
+
+     cp your_path/admin.kubeconfig /workdir/kubeconfig/ && cd /workdir/kubeconfig/ && mv admin.kubeconfig kubeconfig.yaml
+
+  3. kubectl create -f heyelb/conf/yaml/create_lb.yaml 
 
 Scenario 2：traditional datacenter
 
@@ -60,17 +70,7 @@ Installation
   
   4. sh worker_node.sh <vip> <etcd_endpoints> <svc_ip_DNS>  "cluster.local." "/kube-centos/network"
   
-  5. docker pull heyelb:v6
-  
-  6. choose anyone node and run heyelb:
-  
-     * mkdir -p /workdir/servers/ && mkdir -p /workdir/etcd/ && mkdir -p /workdir/kubeconfig/ 
-  
-     * cd /workdir/servers/ && touch upstream.conf 
-  
-     * cp *your_path*/admin.kubeconfig /workdir/kubeconfig/ && cd /workdir/kubeconfig/ && mv admin.kubeconfig kubeconfig.yaml
-  
-     * docker run -v /workdir/servers/:/export/home/yeepine-1.0/conf/servers/ -v /workdir/etcd:/default.etcd -v /workdir/kubeconfig:/workdir/kubeconfig -d heyelb:v6 /bin/bash
+  5. repeat "Scenario 1"
 
 Getting started
 
