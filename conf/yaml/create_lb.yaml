@@ -1,1 +1,43 @@
-
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: parasaus
+  namespace: parasaus
+  labels:
+    name: parasaus
+spec:
+  replicas: 1
+  selector:
+     matchLabels:
+       name: parasaus
+  template:
+    metadata:
+      labels:
+         name: parasaus
+    spec:
+     containers:
+     - name: parasaus
+       image: dinosaurpark/parasaus:v1
+       imagePullPolicy: IfNotPresent
+       ports:
+       - containerPort: 8080
+       volumeMounts:
+       - mountPath: /export/home/yeepine-1.0/conf/servers/
+         name: hc-volume
+       - mountPath: /default.etcd
+         name: etcd-volume
+       - mountPath: /workdir/kubeconfig
+         name: kube-volume
+     volumes:
+     - name: hc-volume
+       hostPath:
+         path: /workdir/servers/
+         type: Directory
+     - name: etcd-volume
+       hostPath:
+         path: /workdir/etcd
+         type: Directory
+     - name: kube-volume
+       hostPath:
+         path: /workdir/kubeconfig
+         type: Directory
