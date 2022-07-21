@@ -80,7 +80,7 @@ Getting started
   
   2. Endpoints.metadata.annotations.calledSource.healthCheckType have 3 types, which supports only http, tcp and mysql.
   
-  3.there is a yaml file in /heyelb/example/ 
+  3. there is a yaml file in /heyelb/example/ 
 
 ok, let's have a nice journey!
   
