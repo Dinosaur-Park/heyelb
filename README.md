@@ -26,6 +26,26 @@ Features
 
 Get Started
 ----------------------------
+Scenario 1：cloud-native 
+
+Prepare
+
+  1. core switch supports network quality feature, such as cisco sla, h3c nqa
+
+  2. 3 servers， minimal configuration(Strongly recommended): 
+
+     * 8c, 32G mem, 100G disk
+
+     * turnoff swap on all nodes，supports passwordless login beetween nodes
+
+Installation
+
+  0. equivalent routing is configured on the switch and all traffic which forwards svc_cidr goes through three nodes
+
+  1. login node1
+
+Scenario 2：traditional datacenter
+
 Prepare
 
   1. core switch supports network quality feature, such as cisco sla, h3c nqa
