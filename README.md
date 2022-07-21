@@ -32,7 +32,7 @@ Prepare
 
   1. you have to a k8s cluster
 
-  2. kubectl create -f heyelb/conf/yaml/create_lb_dp.yaml 
+  2. kubectl create -f heyelb/conf/yaml/create_lb.yaml 
 
 Scenario 2：traditional datacenter
 
