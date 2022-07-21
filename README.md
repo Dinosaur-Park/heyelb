@@ -31,8 +31,10 @@ Scenario 1：cloud-native
 Prepare
 
   1. you have to a k8s cluster
+  
+Installation
 
-  2. configure a volume to store data. for example: nfs, pv&pvc, hostpath
+  1. configure a volume to store data. for example: nfs, pv&pvc, hostpath
      
      as following about "hostpath":
      
@@ -42,7 +44,7 @@ Prepare
 
      cp your_path/admin.kubeconfig /workdir/kubeconfig/ && cd /workdir/kubeconfig/ && mv admin.kubeconfig kubeconfig.yaml
 
-  3. kubectl create -f heyelb/conf/yaml/create_lb.yaml 
+  2. kubectl create -f heyelb/conf/yaml/create_lb.yaml 
 
 Scenario 2：traditional datacenter
 
@@ -77,7 +79,9 @@ Getting started
   1. edit a yaml file, Service.spec.ports.name and Endpoints.subnets.addresses.ports.name must be the same, Endpoints.metadata.annotations.calledSource and Endpoints.metadata.annotations.calledSource.healthCheckType are required. 
   
   2. Endpoints.metadata.annotations.calledSource.healthCheckType have 3 types, which supports only http, tcp and mysql.
+  
+  3.there is a example in 
 
 ok, let's have a nice journey!
   
-if you have any ideas or questions, please tell me(422287032@qq.com) or take a new issue. thanks
+if you have any ideas or questions, please tell me(opendinosaurpark@gmail.com) or take a new issue. thanks
