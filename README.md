@@ -30,7 +30,7 @@ Scenario 1：cloud-native
 
 Prepare
 
-  1. core switch supports network quality feature, such as cisco sla, h3c nqa
+  1. you have to a k8s cluster
 
   2. 3 servers， minimal configuration(Strongly recommended): 
 
