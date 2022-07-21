@@ -32,17 +32,7 @@ Prepare
 
   1. you have to a k8s cluster
 
-  2. 3 servers， minimal configuration(Strongly recommended): 
-
-     * 8c, 32G mem, 100G disk
-
-     * turnoff swap on all nodes，supports passwordless login beetween nodes
-
-Installation
-
-  0. equivalent routing is configured on the switch and all traffic which forwards svc_cidr goes through three nodes
-
-  1. login node1
+  2. kubectl create -f heyelb/conf/yaml/create_lb_dp.yaml 
 
 Scenario 2：traditional datacenter
 
