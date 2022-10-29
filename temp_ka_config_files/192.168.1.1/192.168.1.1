@@ -1,0 +1,17 @@
+vrrp_instance VI_1571 {
+    state MASTER
+    interface eth0
+    virtual_router_id 1571
+    priority 1571
+    advert_int 1
+    unicast_src_ip 192.168.1.1
+    unicast_peer {
+        192.168.1.21
+    }
+    virtual_ipaddress {
+        192.168.1.10
+        192.168.1.3
+        192.168.1.5
+        192.168.1.101
+    }
+}

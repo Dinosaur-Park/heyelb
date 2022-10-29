@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+function help_content(){
+echo 'paractl: the next distribute loadbalancer'
+echo ' -h'
+echo -e '\t The help message of paractl.'
+echo ' init cluster'
+echo -e '\t  initialize the configuration.'
+echo ' create dir/filename'
+echo -e '\t create a service.'
+echo ' delete id'
+echo -e '\t delete a service.'
+echo ' get all/id'
+echo -e '\t get all service or one service information.'
+echo ' modify id dir/filename'
+echo -e '\t modify a service.'
+}
+
+if [ $# -lt 2 ];then
+help_content
+exit 1
+fi
+
+case $1 in
+create)
+echo `python3.7 /workdir/devops/parasaus/paractl.py create $2`
+exit 0
+;;
+delete)
+echo `python3.7 /workdir/devops/parasaus/paractl.py delete $2`
+exit 0
+;;
+get)
+echo `python3.7 /workdir/devops/parasaus/paractl.py get $2`
+exit 0
+;;
+modify)
+echo `python3.7 /workdir/devops/parasaus/paractl.py modify $2 $3`
+exit 0
+;;
+init)
+echo `python3.7 /workdir/devops/parasaus/paractl.py init cluster`
+exit 0
+;;
+*)
+help_content
+exit 1
+esac

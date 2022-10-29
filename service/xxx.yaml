@@ -1,0 +1,29 @@
+kind: service
+apiVersion: v1
+name: lb0100000000000000000011111111111
+virtual_server:
+  ip: 1.1.1.1 # required
+  port: 8080 # required
+  delay_loop: 3 # default 3
+  lb_algo: sh # default rr, supported value rr|wrr|lc|wlc|lblc|sh|dh
+  persistence_timeout: 150 # default none
+  protocol: tcp # default tcp, supported value tcp|udp
+real_server:
+- addresses:
+  ip: 10.132.5.53 # required
+  ports: 8090 # required
+  weight: 1 # default none
+  healthcheck: http # default tcp, supported value tcp|http
+  url: /index.html # if healthcheck is http, url is required
+  nb_get_retry: 3 # default 3
+  delay_before_retry: 3 # default 3
+  connect_timeout: 2 # default 2
+- addresses:
+  ip: 10.132.5.53 # required
+  ports: 8090 # required
+  weight: 1 # default none
+  healthcheck: http # default tcp
+  url: /index.html # if healthcheck is http, url is required
+  nb_get_retry: 3 # default 3
+  delay_before_retry: 3 # default 3
+  connect_timeout: 2 # default 2

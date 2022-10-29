@@ -1,0 +1,16 @@
+[Unit]
+Description=Parasaus paralet
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=-/usr/bin/paralet --etcd-servers=http://192.168.37.2:2379
+#ExecStart=-/usr/bin/paraletsh
+ExecStop=/bin/kill -WINCH ${MAINPID}
+
+Restart=always
+RestartSec=10s
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

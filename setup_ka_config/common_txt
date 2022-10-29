@@ -1,0 +1,12 @@
+vrrp_instance VI_1 {
+    state MASTER
+    interface bond4-1
+    virtual_router_id 201
+    priority 100
+    advert_int 1
+    unicast_src_ip 10.127.11.201
+    unicast_peer {
+    }
+    virtual_ipaddress {
+    }
+}
