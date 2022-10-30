@@ -87,7 +87,7 @@ Getting started
 
   4. vi /workdir/devops/parasaus/service/xxx.yaml and save it
   
-  5. paractl create /workdir/devops/parasaus/service/xxx.yaml and which will return {"code":200}
+  5. input "paractl create /workdir/devops/parasaus/service/xxx.yaml" and which will return {"code":200}
 
 ok, let's have a nice journey!
   
