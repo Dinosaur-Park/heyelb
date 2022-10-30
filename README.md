@@ -26,37 +26,18 @@ Features
 
 Get Started
 ----------------------------
-Scenario 1：cloud-native 
 
 Prepare
 
-  1. you have to a k8s cluster
-  
-Installation
+  1. one managment server and N(minimal is 2) worker nodes
 
-  1. configure a volume to store data. for example: nfs, pv&pvc, hostpath
-     
-     as following about "hostpath":
-     
-     mkdir -p /workdir/servers/ && mkdir -p /workdir/etcd/ && mkdir -p /workdir/kubeconfig/
-
-     cd /workdir/servers/ && touch upstream.conf
-
-     cp your_path/admin.kubeconfig /workdir/kubeconfig/ && cd /workdir/kubeconfig/ && mv admin.kubeconfig kubeconfig.yaml
-
-  2. kubectl create -f heyelb/conf/yaml/create_lb.yaml 
-
-Scenario 2：traditional datacenter
-
-Prepare
-
-  1. core switch supports network quality feature, such as cisco sla, h3c nqa
-
-  2. 3 servers， minimal configuration(Strongly recommended): 
+  recommended configuration: 
 
      * 8c, 32G mem, 100G disk
+     
+     * CentOS 7.9
 
-     * turnoff swap on all nodes，supports passwordless login beetween nodes
+     * turnoff swap on all worker nodes，supports passwordless login beetween management server and workers
 
 Installation
 
