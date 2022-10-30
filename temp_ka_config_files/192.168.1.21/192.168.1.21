@@ -1,0 +1,16 @@
+vrrp_instance VI_1630 {
+    state MASTER
+    interface eth3
+    virtual_router_id 1630
+    priority 1630
+    advert_int 1
+    unicast_src_ip 192.168.1.21
+    unicast_peer {
+        192.168.1.1
+    }
+    virtual_ipaddress {
+        192.168.1.2
+        192.168.1.4
+        192.168.1.100
+    }
+}
