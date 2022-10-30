@@ -14,7 +14,7 @@ Features
 
 2. The forward traffic nodes support horizontal scaling, and the computing power and bandwidth are close to infinity.
 
-3. Traffic forwarding is implemented through LVS. As we all know, LVS is an implementation of Layer 4 load balancing inside the Linux kernel. Layer 4 load balancing works on OSI Layer 4 (Transport Layer) and distributes requests to the servers at the transport layer without looking at the content of the packets, so it has the best performance.
+3. Traffic forwarding is implemented through LVS. As we all know, LVS is implemented inside the Linux kernel. which works on OSI Layer 4 (Transport Layer) and forwards requests to the clients at the transport layer without looking at the content of the packets, so it has the best performance.
 
 4. General x86 server was liked without any special configuration or hardware.
 
