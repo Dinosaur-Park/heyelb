@@ -31,29 +31,25 @@ Prepare
 
   1. one managment server and N(minimal is 2) worker nodes
 
-  recommended configuration: 
+     recommended configuration: 
 
      * 8c, 32G mem, 100G disk
      
      * CentOS 7.9
 
-     * turnoff swap on all worker nodes，supports passwordless login beetween management server and workers
+     * turnoff swap on all worker nodes，supports passwordless login between management server and workers
 
 Installation
 
-  0. equivalent routing is configured on the switch and all traffic which forwards svc_cidr goes through three nodes
+  0. setup yum repo
 
-  1. login node1
+  1. setup passwordless login between management server and workers
  
-  2. cd *your_path*/heyelb/install_cli
+  2. edit init config file
 
-  3. sh master_node.sh <node2_ip> <node3_ip> <node2_hostname> <node3_hostname> <vip> <svc_ip_cidr> <pod_ip_cidr> <etcd_endpoints>
-  
-     for example: sh master_node.sh 10.1.1.2 10.1.1.3 k8s02 k8s03 10.1.1.4 10.11.0.0 10.12.0.0   "https://10.1.1.92:2379,https://10.1.1.93:2379,https://10.1.1.150:2379"
-  
-  4. sh worker_node.sh <vip> <etcd_endpoints> <svc_ip_DNS>  "cluster.local." "/kube-centos/network"
-  
-  5. repeat "Scenario 1"
+  3. install docker on managment server
+
+  4. docker pull image and docker run image
 
 Getting started
 
