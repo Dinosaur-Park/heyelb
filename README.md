@@ -83,7 +83,7 @@ Getting started
                
      notice: option "vip" must be null
   
-  3. input "paractl init cluster" and which return some successful messages
+  3. input "paractl init cluster". if you receive some successful messages, ok, congratulations! there is a production-ready loadbalancer for you!
 
   4. vi /workdir/devops/parasaus/service/xxx.yaml and save it
   
