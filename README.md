@@ -55,6 +55,12 @@ Installation
 
   3. docker pull image and docker run image
 
+     * docker pull image
+
+     * mkdir -p /workdir/stage/service&touch /workdir/stage/init_config.py&mkdir -p /workdir/stage/etcd/&touch /workdir/stage/etcd/default.etcd
+
+     * docker run -v /workdir/stage/init_config.py:/workdir/devops/parasaus/init_config.py -v /workdir/stage/service:/workdir/devops/parasaus/service/ -v /workdir/stage/etcd/default.etcd:/default.etcd -p 2379:2379 -p 2380:2380 -it -d parasaus:v9 /bin/bash --restart=always
+
 Getting started
 
   1. edit a yaml file, Service.spec.ports.name and Endpoints.subnets.addresses.ports.name must be the same, Endpoints.metadata.annotations.calledSource and Endpoints.metadata.annotations.calledSource.healthCheckType are required. 
