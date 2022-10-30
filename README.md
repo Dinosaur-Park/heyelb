@@ -41,19 +41,19 @@ Prepare
 
 Installation
 
-  0. setup yum repo on all servers and nodes, it have to include all CentOS 7.9 packages and docker
+  1. setup yum repo on all servers and nodes, it have to include all CentOS 7.9 packages and docker
 
-  1. setup passwordless login between management server and workers on management server
+  2. setup passwordless login between management server and workers on management server
      
      * ssh-copy-id worker_node_ip
 
      * ssh worker_node_ip date (verify it about passwordless login)
  
-  2. install docker on managment server
+  3. install docker on managment server
 
      * yum install -y docker*
 
-  3. docker pull image and docker run image
+  4. docker pull image and docker run image
 
      * docker pull image
 
@@ -63,11 +63,29 @@ Installation
 
 Getting started
 
-  1. edit a yaml file, Service.spec.ports.name and Endpoints.subnets.addresses.ports.name must be the same, Endpoints.metadata.annotations.calledSource and Endpoints.metadata.annotations.calledSource.healthCheckType are required. 
+  1. docker exec -it docker_id /bin/bash 
   
-  2. Endpoints.metadata.annotations.calledSource.healthCheckType have 3 types, which supports only http, tcp and mysql.
+  2. vi /workdir/devops/parasaus/init_config.py and input critical info. for example:
   
-  3. there is a yaml file in /heyelb/example/ 
+  init_config = {
+               "virtual_ip":["192.168.9.3", "192.168.9.9"],
+               "etcd":{'ip':"10.13.5.16",'port':2379},
+               "servers":{
+                   "192.168.9.4":{
+                       "device":"ens192",
+                       "vip":[]
+                   },
+                   "192.168.9.5":{
+                       "device":"ens192",
+                        "vip":[]
+                   }
+               }
+               }
+  notice: option "vip" must be null
+  
+  3. input "paractl init cluster" and which return some successful messages
+
+  4. 
 
 ok, let's have a nice journey!
   
