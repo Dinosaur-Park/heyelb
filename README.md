@@ -10,7 +10,7 @@ The technical architecture of HeYe(Parasaus):
 
 Features
 ------------------------
-1. The data plane and the control plane are separated in the architecture, a clean architecture is realized. The data plane is borrowed from kubernetes, and the control plane is implemented by ourselves, which is very lightweight.
+1. The data plane and the control plane are separated in the architecture, a clean architecture is realized.
 
 2. The forward traffic nodes support horizontal scaling, and the computing power and bandwidth are close to infinity.
 
