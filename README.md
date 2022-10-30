@@ -12,15 +12,15 @@ Features
 ------------------------
 1. The data plane and the control plane are separated in the architecture, a clean architecture is realized. The data plane is borrowed from kubernetes, and the control plane is implemented by ourselves, which is very lightweight.
 
-2. The forward traffic nodes are stateless and support horizontal scaling. The maximum number of nodes is 254, and the computing power and bandwidth are close to infinity.
+2. The forward traffic nodes support horizontal scaling, and the computing power and bandwidth are close to infinity.
 
 3. Traffic forwarding is implemented through LVS. As we all know, LVS is an implementation of Layer 4 load balancing inside the Linux kernel. Layer 4 load balancing works on OSI Layer 4 (Transport Layer) and distributes requests to the servers at the transport layer without looking at the content of the packets, so it has the best performance.
 
 4. General x86 server was liked without any special configuration or hardware.
 
-5. The configuration of addition, deletion, modification and query supports hot update, which has no impact on the business. These can be done through yam and API, which is very simple and friendly
+5. The configuration of addition, deletion, modification and query supports hot update, which has no impact on the business. These can be done through yaml and API, which is very simple and friendly
 
-6. Supports 3 modes of health check on layer 7 HTTP headers, layer 4 tcp port and mysql service.
+6. Supports 3 modes of health check on layer 7 HTTP headers, layer 4 tcp port and udp.
 
 7. Supports multiple load balancing modes, such as RR, LC, WLC, WRR, source hash, etc.
 
