@@ -65,7 +65,7 @@ Getting started
 
   1. docker exec -it docker_id /bin/bash 
   
-  2. vi /workdir/devops/parasaus/init_config.py and input critical info. for example:
+  2. vi /workdir/devops/parasaus/init_config.py and save it. for example:
   
      init_config = {
      
