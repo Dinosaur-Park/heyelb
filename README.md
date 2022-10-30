@@ -41,15 +41,19 @@ Prepare
 
 Installation
 
-  0. setup yum repo
+  0. setup yum repo on all servers and nodes, it have to include all CentOS 7.9 packages and docker
 
-  1. setup passwordless login between management server and workers
+  1. setup passwordless login between management server and workers on management server
+     
+     * ssh-copy-id worker_node_ip
+
+     * ssh worker_node_ip date (verify it about passwordless login)
  
-  2. edit init config file
+  2. install docker on managment server
 
-  3. install docker on managment server
+     * yum install -y docker*
 
-  4. docker pull image and docker run image
+  3. docker pull image and docker run image
 
 Getting started
 
