@@ -68,6 +68,7 @@ Getting started
   2. vi /workdir/devops/parasaus/init_config.py and input critical info. for example:
   
      init_config = {
+     
                "virtual_ip":["192.168.9.3", "192.168.9.9"],
                "etcd":{'ip':"10.13.5.16",'port':2379},
                "servers":{
