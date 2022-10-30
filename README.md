@@ -37,8 +37,6 @@ Prepare
      
      * CentOS 7.9
 
-     * turnoff swap on all worker nodes，supports passwordless login between management server and workers
-
 Installation
 
   1. setup yum repo on all servers and nodes, it have to include all CentOS 7.9 packages and docker
