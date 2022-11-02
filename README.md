@@ -45,7 +45,7 @@ Installation
      
      * ssh-copy-id worker_node_ip
 
-     * ssh worker_node_ip date (verify it about passwordless login)
+     * ssh worker_node_ip date (verify it for step1)
  
   3. install docker on managment server
 
