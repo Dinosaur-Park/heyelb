@@ -41,7 +41,7 @@ Installation
 
   1. setup yum repo on all servers and nodes, it have to include all CentOS 7.9 packages and docker
 
-  2. setup passwordless login between management server and workers on management server
+  2. setup passwordless login between management server and all workers nodes on management server
      
      * ssh-copy-id worker_node_ip
 
