@@ -35,7 +35,7 @@ Prepare
 
      * 8c, 32G mem, 100G disk
      
-     * CentOS 7.9（）
+     * CentOS 7.9 (have to)
 
 Installation
 
