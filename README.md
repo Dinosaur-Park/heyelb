@@ -53,7 +53,7 @@ Installation
 
   4. docker pull image and docker run image
 
-     * docker pull image
+     * docker pull dinosaurpark/parasaus:v2
 
      * mkdir -p /workdir/stage/service&touch /workdir/stage/init_config.py&mkdir -p /workdir/stage/etcd/&touch /workdir/stage/etcd/default.etcd
 
